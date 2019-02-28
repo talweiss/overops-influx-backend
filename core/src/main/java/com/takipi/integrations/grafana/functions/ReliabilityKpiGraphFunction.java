@@ -481,7 +481,9 @@ public class ReliabilityKpiGraphFunction extends BaseGraphFunction {
 			result.score += scoreInterval.score;
 		}
 		
-		result.score /= intervals.size();
+		if (intervals.size() > 0) {
+			result.score /= intervals.size();
+		}
 		
 		return result;
 	}
