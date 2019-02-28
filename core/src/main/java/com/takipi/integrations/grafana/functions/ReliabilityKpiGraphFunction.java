@@ -704,7 +704,7 @@ public class ReliabilityKpiGraphFunction extends BaseGraphFunction {
 				break;
 				
 			default:
-				throw new IllegalStateException();
+				throw new IllegalStateException(String.valueOf(kpi));
 		}
 		
 		Map<DateTime, KpiInterval> targetIntervals;
